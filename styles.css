@@ -1,0 +1,398 @@
+:root{
+    /* main */
+    --intro-email: hsl(217, 28%, 15%);
+    --main-bg: hsl(218, 28%, 13%);
+    --footer-bg: hsl(216, 53%, 9%);
+    --testimonials: hsl(219, 30%, 18%);
+
+    /* accent */
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --gradiant: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    --light-red: hsl(0, 100%, 63%);
+
+    /* neutral */
+    --white: hsl(0, 0%, 100%);
+}
+
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+
+body{
+    background: linear-gradient(hsl(217, 28%, 15%) 75em, hsl(218, 28%, 13%) 75em);
+    position: relative;
+}
+
+body::before{
+    content: "";
+    background: url(images/bg-curvy-desktop.svg) no-repeat center top 46em;
+    background-size: 210vh;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+h1, h2, h3, h4, h5, button, nav{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+/* _________nav_________ */
+nav{
+    display: flex;
+    padding: 1% 5%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav > img{
+    width: 8em;
+    margin: 0 auto 0 0;
+}
+
+nav > ul{
+    display: flex;
+    gap: 0.5em;
+}
+
+nav li{
+    margin: auto 0;
+}
+
+nav a:hover{
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: underline;
+}
+
+nav a{
+    color: var(--cyan);
+}
+
+.scrolling-active{
+    background: var(--footer-bg);
+}
+.scrolling-active > img{
+    width: 6em;
+}
+
+
+
+/* _________main_________ */
+main{
+    position: relative;
+    text-align: center;
+}
+
+
+/* ______intro______ */
+.intro{
+    margin-bottom: 12em;
+}
+.intro > img{
+    margin-top: 5em;
+}
+
+.intro > h1{
+    color: var(--white);
+    width: 18em;
+    margin: 1em auto;
+}
+
+.intro > p{
+    color: var(--cyan);
+    width: 30em;
+    margin: 0 auto;
+}
+
+.intro > button{
+    background: var(--gradiant);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+
+    padding: 1em 5em;
+    border-radius: 2em;
+    margin-top: 2em;
+}
+
+
+/* ______offers______ */
+.offers{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5em;
+    color: var(--cyan);
+    width: 57em;
+    margin: 0 auto 12em;
+}
+
+.offers h2{
+    color: var(--white);
+}
+
+
+/* ______stay productive______ */
+.stay-productive{
+    display: flex;
+    padding: 0 10%;
+    gap: 3em;
+}
+
+.stay-productive > img{
+    width: 50%;
+}
+
+.content{
+    text-align: start;
+    color: var(--cyan);
+    width: 30%;
+    margin: auto 0;
+}
+
+.content > h3{
+    font-size: 36px;
+    color: var(--white);
+    width: 9em;
+    margin-bottom: 0.5em;
+}
+
+.content > p{
+    margin-bottom: 1em;
+}
+
+.fylo-working{
+    display: inline;
+    cursor: pointer;
+    gap: 1%;
+    border-bottom: 1px var(--white) solid;
+}
+
+.fylo-working > p{
+    display: inline-block;
+}
+
+.fylo-working a{
+    color: var(--cyan);
+}
+
+
+/* ______testimonials______ */
+.testimonials{
+    color: var(--cyan);
+    display: flex;
+    gap: 3.5%;
+    width: 80%;
+    margin: 10em auto;
+}
+
+.testimonial{
+    background: var(--testimonials);
+    text-align: start;
+    width: 31%;
+    padding: 2em 1.5em;
+    border-radius: 0.5em;
+}
+
+.person-container{
+    display: flex;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.person-container > div{
+    margin: auto 0;
+}
+
+.person-container > img{
+    width: 3.5em;
+    border-radius: 50%;
+}
+
+.name{
+    color: var(--white);
+    font-weight: 700;
+}
+
+
+/* ______access______ */
+.access{
+    background: var(--testimonials);
+    color: var(--cyan);
+    width: 55%;
+    padding: 2% 4%;
+    border-radius: 0.5em;
+
+    position: absolute;
+    bottom: -19em;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.access h4{
+    color: var(--white);
+    font-size: 20px;
+}
+
+.access p{
+    width: 85%;
+    margin: 1em auto 2em;
+}
+
+#enterMail{
+    width: 38em;
+    height: 3em;
+
+    padding: 0 3em;
+    border-radius: 3em;
+    margin-right: 1em;
+}
+
+.access button{
+    background: var(--gradiant);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+    width: 12em;
+    height: 3em;
+
+    border-radius: 3em;
+    margin-top: 1em;
+}
+
+
+
+/* _________footer_________ */
+footer{
+    background: var(--footer-bg);
+    color: var(--cyan);
+    display: flex;
+    gap: 5%;
+    padding: 15em 10% 5em;
+    position: relative;
+}
+
+footer > img{
+    width: 8em;
+    position: absolute;
+    top: 11em;
+}
+
+footer > p{
+    width: 30%;
+}
+
+footer p{
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    gap: 2%;
+}
+
+.icons > img{
+    cursor: pointer;
+    width: 28px;
+    margin: 0 0 auto;
+}
+
+
+
+
+@media(max-width:1184px){
+    /* _________main_________ */
+    /* ______offers______ */
+    .offers{
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
+    /* ______stay productive______ */
+    .stay-productive{
+        flex-direction: column;
+        align-items: center;
+    }
+    .stay-productive > img{
+        width: 80%;
+    }
+    .content{
+        width: 80%;
+    }
+    .content > h3{
+        font-size: 24px;
+        width: 80%;
+    }
+    /* ______testimonials______ */
+    .testimonials{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .testimonial{
+        width: 100%;
+    }
+    /* ______access______ */
+    .access{
+        width: 90%;
+    }
+    #enterMail{
+        width: 90%;
+    }
+}
+
+@media(max-width: 790px){
+    body{
+        background: linear-gradient(hsl(217, 28%, 15%) 44em, hsl(218, 28%, 13%) 44em);
+    }
+    body::before{
+        background: url(images/bg-curvy-mobile.svg) no-repeat center top 28em;
+        background-size: 100vh;
+    }
+
+    /* _________main_________ */
+    /* ______intro______ */
+    .intro{
+        width: 100%;
+    }
+    .intro > img{
+        width: 70%;
+    }
+    .intro > h1, .intro > p{
+        width: 100%;
+    }
+    /* ______access______ */
+    .access{
+        bottom: -22em;
+    }
+
+    /* _________footer_________ */
+    footer{
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 15em;
+    }
+    footer > img{
+        top: 12em;
+    }
+    footer > p{
+        width: 100%;
+    }
+}
